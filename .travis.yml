@@ -1,4 +1,3 @@
-#test5
 os: linux
 language: java
 services:
