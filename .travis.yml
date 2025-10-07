@@ -4,4 +4,4 @@ dist: focal
 
 vm:
   create:
-    name: retention-org-i1
+    name: retention-org-i2
