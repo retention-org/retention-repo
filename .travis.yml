@@ -1,7 +1,17 @@
-os: linux
-language: generic
-dist: focal
-
-vm:
-  create:
-    name: retention-org-i2
+jobs:
+  include:
+    - stage: "Test1"
+      name: "Use custom image test1"
+      vm:
+        use:
+          name: retention-org-i1
+      script:
+        - echo "Checking if custom file exists"
+        - sudo cat /my-custom-dir/my_custom_file.txt
+    - stage: "Test2"
+      name: "Use custom image test2"
+      vm:
+        use:
+          name: retention-org-i2
+      script:
+        - echo "Using custom image"
