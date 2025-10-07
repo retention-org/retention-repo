@@ -1,7 +1,7 @@
-os: linux
-language: generic
-dist: focal
-
-vm:
-  create:
-    name: retention-org-i3
+jobs:
+  include:
+    - stage: "Test"
+      name: "Use custom image"
+      vm:
+        use:
+          name: retention-org-i3
