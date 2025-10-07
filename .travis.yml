@@ -4,4 +4,4 @@ jobs:
       name: "Use custom image"
       vm:
         use:
-          name: retention-org-i3
+          name: retention-org-i2
