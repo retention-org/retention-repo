@@ -1,7 +1,18 @@
+os: linux
+language: java
+services:
+  - docker
+cache: bundler
+dist: focal
+install: skip
 jobs:
   include:
-    - stage: "Test"
-      name: "Use custom image"
-      vm:
-        use:
-          name: retention-org-i3
+    - name: testing
+      script: true
+
+after_success:
+  - echo passed
+  - echo $TRAVIS_TEST_RESULT
+after_failure:
+  - echo failed
+  - echo $TRAVIS_TEST_RESULT
