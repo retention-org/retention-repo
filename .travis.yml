@@ -22,4 +22,4 @@ language: generic
 dist: focal
 vm:
   create:
-    name: retention-org-i7
+    name: retention-org-i8
