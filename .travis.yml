@@ -7,12 +7,18 @@ dist: focal
 install: skip
 
 stages:
-   - name: testing
-     script: false
+  - name: test
+
+jobs:
+  include:
+    - stage: test
+      name: testing
+      script: true
 
 after_success:
   - echo passed
   - echo $TRAVIS_TEST_RESULT
+
 after_failure:
   - echo failed
   - echo $TRAVIS_TEST_RESULT
