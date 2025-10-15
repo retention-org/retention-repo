@@ -5,6 +5,7 @@ services:
 cache: bundler
 dist: focal
 install: skip
+
 stages:
    - name: testing
      script: true
